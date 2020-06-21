@@ -1,11 +1,19 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersControllers = void 0;
-const Users_1 = require("@models/Users");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.UsersControllers = void 0;
+
+var _Users = require("@models/Users");
+
 class UsersControllers {
-    teste() {
-        const user = new Users_1.User();
-    }
+  teste() {
+    const user = new _Users.User();
+  }
+
 }
+
 exports.UsersControllers = UsersControllers;
-exports.default = UsersControllers;
+var _default = UsersControllers;
+exports.default = _default;
