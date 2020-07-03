@@ -8,20 +8,26 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-typescript'
+    '@babel/preset-typescript',
   ],
   plugins: [
+    'babel-plugin-transform-typescript-metadata',
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+
     ['module-resolver', {
       alias: {
-        '@modules': './src/models',
+        '@entities': './src/entities',
+        '@services': './src/services',
+        '@controllers': './src/controllers',
         '@core': './src/core',
         '@shared': './src/shared',
-        '@infra': './src/infra',
         '@config': './src/config',
-        '@controllers': './src/controllers',
+        '@infra': './src/infra'
       }
     }]
   ],
+
   ignore: [
     '**/*.spec.ts'
   ]
